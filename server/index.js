@@ -1,3 +1,4 @@
+// 🚀 Load .env before any other imports
 import dotenv from "dotenv";
 dotenv.config();
 console.log("DEBUG API key:", process.env.OPENAI_API_KEY);
@@ -5,15 +6,14 @@ console.log("DEBUG API key length:", process.env.OPENAI_API_KEY?.length || "not 
 
 import express from "express";
 import bodyParser from "body-parser";
-import employeeRoute from "./routes/employee.js";
-import employerRoute from "./routes/employer.js";
-
+import employeeRoute from "./routes/employee.js";  // <-- this now loads AFTER dotenv
+// import employerRoute from "./routes/employer.js";
 
 const app = express();
 app.use(bodyParser.json());
 
 app.use("/copilot/employee", employeeRoute);
-app.use("/copilot/employer", employerRoute);
+
 import path from "path";
 import { fileURLToPath } from "url";
 

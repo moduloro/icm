@@ -1,14 +1,209 @@
 [
   {
-    "topic": "RevOps Analyst",
-    "snippet": "MEOS Q3 2025: Demand for RevOps Analysts increased by 18% year-over-year. Key drivers: SQL and CRM Data Modeling."
+    "section": "Executive Summary",
+    "id": "exec-1",
+    "snippet": "40,671 employers across 42 countries were asked about their third quarter hiring intentions and the reasoning behind their decisions in the latest edition of the ManpowerGroup Employment Outlook Survey."
   },
   {
-    "topic": "CX Insights",
-    "snippet": "MEOS Q3 2025: CX Insights demand is stable globally, moderate growth in data storytelling and visualization roles."
+    "section": "Executive Summary",
+    "id": "exec-2",
+    "snippet": "Global Net Employment Outlook is 24%. This is calculated by subtracting employers planning reductions vs. those planning to hire. It weakened by 1 point since the previous quarter and increased by 2 points since Q3 2024."
   },
   {
-    "topic": "CRM Analyst",
-    "snippet": "MEOS Q3 2025: CRM Analyst roles expanding in North America and APAC, particularly Salesforce-related governance."
+    "section": "Executive Summary",
+    "id": "exec-3",
+    "snippet": "37% of employers who plan to hire reported that their company is expanding in size, creating more positions."
+  },
+  {
+    "section": "Executive Summary",
+    "id": "exec-4",
+    "snippet": "The highest global hiring demand is in Information Technology and in Finance and Real Estate."
+  },
+  {
+    "section": "Global Outlooks",
+    "id": "global-1",
+    "snippet": "Global Net Employment Outlook is 24% for Q3 2025."
+  },
+  {
+    "section": "Global Outlooks",
+    "id": "global-2",
+    "snippet": "Outlook weakened by 1 point since Q2 2025, and increased by 2 points year-over-year compared with Q3 2024."
+  },
+  {
+    "section": "Global Outlooks",
+    "id": "global-3",
+    "snippet": "Regional comparisons: APAC Outlook 29%, Americas 27%, EMEA 19%."
+  },
+  {
+    "section": "Global Outlooks",
+    "id": "global-4",
+    "snippet": "Strongest country-level hiring demand: United Arab Emirates 48%, India 42%, Costa Rica 41%."
+  },
+  {
+    "section": "Global Outlooks",
+    "id": "global-5",
+    "snippet": "Weakest country-level hiring demand: Argentina 3%, Hungary 5%, Hong Kong 8%."
+  },
+  {
+    "section": "Global Outlooks",
+    "id": "global-6",
+    "snippet": "By industry sector: Information Technology 36%, Financials 28%, Industrials 26%."
+  },
+
+  {
+    "section": "Regional Outlooks - APAC",
+    "id": "apac-1",
+    "snippet": "Asia-Pacific Net Employment Outlook is 29% for Q3 2025."
+  },
+  {
+    "section": "Regional Outlooks - APAC",
+    "id": "apac-2",
+    "snippet": "The APAC Outlook weakened by 2 points quarter-over-quarter and strengthened by 3 points compared with Q3 2024."
+  },
+  {
+    "section": "Regional Outlooks - APAC",
+    "id": "apac-3",
+    "snippet": "APAC countries with strongest demand: India 42%, Australia 34%, China 30%."
+  },
+  {
+    "section": "Regional Outlooks - APAC",
+    "id": "apac-4",
+    "snippet": "APAC countries with weakest demand: Hong Kong 8%, Japan 12%, Taiwan 15%."
+  },
+  {
+    "section": "Regional Outlooks - Americas",
+    "id": "americas-1",
+    "snippet": "Americas Net Employment Outlook is 27% for Q3 2025."
+  },
+  {
+    "section": "Regional Outlooks - Americas",
+    "id": "americas-2",
+    "snippet": "The Americas Outlook strengthened by 2 points quarter-over-quarter and 4 points compared with Q3 2024."
+  },
+  {
+    "section": "Regional Outlooks - Americas",
+    "id": "americas-3",
+    "snippet": "Strongest hiring intentions: Costa Rica 41%, United States 34%, Mexico 31%."
+  },
+  {
+    "section": "Regional Outlooks - Americas",
+    "id": "americas-4",
+    "snippet": "Weakest hiring intentions: Argentina 3%, Colombia 17%, Brazil 18%."
+  },
+  {
+    "section": "Regional Outlooks - EMEA",
+    "id": "emea-1",
+    "snippet": "Europe, Middle East, and Africa Net Employment Outlook is 19% for Q3 2025."
+  },
+  {
+    "section": "Regional Outlooks - EMEA",
+    "id": "emea-2",
+    "snippet": "The EMEA Outlook weakened by 1 point since last quarter, and remained flat compared with Q3 2024."
+  },
+  {
+    "section": "Regional Outlooks - EMEA",
+    "id": "emea-3",
+    "snippet": "Strongest hiring demand: United Arab Emirates 48%, South Africa 32%, Netherlands 28%."
+  },
+  {
+    "section": "Regional Outlooks - EMEA",
+    "id": "emea-4",
+    "snippet": "Weakest hiring demand: Hungary 5%, Czech Republic 8%, Italy 9%."
+  },
+
+  {
+    "section": "Workforce Trends",
+    "id": "workforce-1",
+    "snippet": "37% of employers who plan to hire reported that their company is expanding in size, creating more positions."
+  },
+  {
+    "section": "Workforce Trends",
+    "id": "workforce-2",
+    "snippet": "30% of employers stated that increased demand for skills is the primary reason for hiring."
+  },
+  {
+    "section": "Workforce Trends",
+    "id": "workforce-3",
+    "snippet": "22% of employers reported hiring to replace staff who left voluntarily or involuntarily."
+  },
+  {
+    "section": "Workforce Trends",
+    "id": "workforce-4",
+    "snippet": "11% of employers are hiring to support organizational restructuring or transformation."
+  },
+  {
+    "section": "Workforce Trends",
+    "id": "workforce-5",
+    "snippet": "Employers cite the top three reasons for not hiring as automation gains, efficiency improvements, and uncertain economic outlook."
+  },
+
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-1",
+    "snippet": "Information Technology has the strongest hiring outlook globally at 36%."
+  },
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-2",
+    "snippet": "Financials and Real Estate report a Net Employment Outlook of 28%."
+  },
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-3",
+    "snippet": "Industrials report a Net Employment Outlook of 26%."
+  },
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-4",
+    "snippet": "Healthcare and Life Sciences show a Net Employment Outlook of 25%."
+  },
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-5",
+    "snippet": "Consumer Goods and Services show a Net Employment Outlook of 23%."
+  },
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-6",
+    "snippet": "Communication Services show a Net Employment Outlook of 22%."
+  },
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-7",
+    "snippet": "Energy and Utilities show a Net Employment Outlook of 20%."
+  },
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-8",
+    "snippet": "Public Services show a Net Employment Outlook of 18%."
+  },
+  {
+    "section": "Industry Outlooks",
+    "id": "industry-9",
+    "snippet": "The weakest sector is Education with a Net Employment Outlook of 15%."
+  },
+
+  {
+    "section": "About the Survey",
+    "id": "survey-1",
+    "snippet": "The ManpowerGroup Employment Outlook Survey (MEOS) is conducted quarterly to measure employers' hiring intentions for the upcoming quarter."
+  },
+  {
+    "section": "About the Survey",
+    "id": "survey-2",
+    "snippet": "For Q3 2025, interviews were conducted with 40,671 employers across 42 countries and territories."
+  },
+  {
+    "section": "About the Survey",
+    "id": "survey-3",
+    "snippet": "The Net Employment Outlook is derived by subtracting the percentage of employers anticipating a decrease in headcount from the percentage anticipating an increase."
+  },
+  {
+    "section": "About the Survey",
+    "id": "survey-4",
+    "snippet": "Data is collected through structured interviews and is seasonally adjusted to provide more meaningful comparisons."
   }
 ]
+
+
+
