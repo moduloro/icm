@@ -475,6 +475,20 @@
   }
 });
 
+function renderMarkdown(text) {
+  // Bold **text**
+  text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  // Bullet points - item
+  text = text.replace(/^- (.*)$/gim, "<li>$1</li>");
+  // Wrap list items in <ul>
+  if (text.includes("<li>")) {
+    text = "<ul>" + text + "</ul>";
+  }
+  // Line breaks
+  text = text.replace(/\n/g, "<br>");
+  return text;
+}
+
 
   chatForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -501,13 +515,20 @@ mainEl.appendChild(loading);
 
     try {
   const res = await fetch("http://localhost:3000/copilot/employee", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message: text })
-  });
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    message: text,
+    context: {
+      currentTile: "RevOps Analyst",
+      tileData: "Match: 85%, Skills: SQL, CRM Models"
+    }
+  })
+});
+  
   const data = await res.json();
 
-  loading.innerHTML = data.reply || "⚠️ No reply from Copilot.";
+  loading.innerHTML = renderMarkdown(data.reply || "⚠️ No reply from Copilot.");
 } catch (err) {
   loading.innerHTML = "❌ Error contacting Copilot.";
 }

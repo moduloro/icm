@@ -337,11 +337,24 @@ main { padding: 28px 40px; display: grid; gap: 28px; }
 /* Bot bubble: left side, grey */
 .bot-msg {
   align-self: flex-start;
-  background: #F5F5F5;
+  background: #f7f7f7;
   color: var(--text);
-  margin-right: auto; /* push to left */
-  border-bottom-left-radius: 4px;
+  border: 0px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 6px 0;
+  max-width: 90%;          /* wider bubble */
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: normal;      /* allow wrapping */
 }
+
+.bot-msg ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+
 #copilotForm {
   display: flex;
   gap: 6px;
