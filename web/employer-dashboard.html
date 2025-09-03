@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Employer Dashboard · ICMaaS</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo" aria-hidden="true"></div>
+    <div>
+      <h1>ICMaaS · Employer</h1>
+      <div class="sub">Internal Career Mobility-as-a-Service — powered by MEOS + TAPFIN</div>
+    </div>
+  </div>
+  <div class="chips">
+    <span class="chip">Global NEO: 24% (MEOS Q3-2025)</span>
+    <span class="chip">Talent Shortage: 74% (2025)</span>
+  </div>
+  <button class="copilot-toggle" id="openCopilot" aria-expanded="false" aria-controls="copilotDrawer">
+  ICM Copilot
+</button>
+
+</header>
+
+<main>
+  <!-- KPI bar -->
+  <section class="section">
+    <h2>Executive KPIs
+  <span class="tip">
+    <!-- change data-copilot to kpi_overview -->
+    <button class="info-btn" data-copilot="kpi_overview" aria-label="Explain KPIs">i</button>
+    <span class="tip-bubble">Summary of redeployment, time-to-redeploy, internal fill, and savings. Click for the full Copilot overview.</span>
+  </span>
+</h2>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="label">Redeployment rate (YTD)</div>
+        <div class="value">61%</div>
+        <div class="progress"><span style="width:61%"></span></div>
+        <div class="delta up">+9 pts vs last quarter</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Avg time to redeploy</div>
+        <div class="value">42 days</div>
+        <div class="progress"><span style="width:70%"></span></div>
+        <div class="delta up">−8 days vs last quarter</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Internal fill ratio</div>
+        <div class="value">38%</div>
+        <div class="progress"><span style="width:38%"></span></div>
+        <div class="delta up">+6 pts YoY</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Backfill SLA compliance</div>
+        <div class="value">92%</div>
+        <div class="progress"><span style="width:92%"></span></div>
+        <div class="delta up">+3 pts</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Savings vs external hiring</div>
+        <div class="value">CHF 1.8m</div>
+        <div class="progress"><span style="width:75%"></span></div>
+        <div class="delta up">QTD estimate</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Retention of redeployed</div>
+        <div class="value">88% @ 9 mo</div>
+        <div class="progress"><span style="width:88%"></span></div>
+        <div class="delta up">stable</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Learning → placement conversion</div>
+        <div class="value">64%</div>
+        <div class="progress"><span style="width:64%"></span></div>
+        <div class="delta up">+11 pts</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Compliance clearances</div>
+        <div class="value">99.1%</div>
+        <div class="progress"><span style="width:99%"></span></div>
+        <div class="delta up">IR35/SoW/GDPR</div>
+      </div>
+    </div>
+    <div class="note">Benchmarks reference ManpowerGroup MEOS Q3-2025 (Global NEO 24%) and 2025 Global Talent Shortage (74%).</div>
+  </section>
+
+  <!-- Insight + MEOS panel -->
+  <section class="section grid-2">
+    <div>
+      <h2>Redeployment Pipeline</h2>
+      <table class="table" aria-label="Redeployment pipeline">
+        <thead>
+          <tr><th>Function</th><th>At-risk</th><th>Matches (internal)</th><th>In training</th><th>Placed</th><th>SLA status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sales Ops</td><td>18</td><td>12</td><td>6</td><td>8</td><td><span class="badge ok">On track</span></td></tr>
+          <tr><td>Field Service</td><td>24</td><td>15</td><td>9</td><td>11</td><td><span class="badge warn">Watch</span></td></tr>
+          <tr><td>Finance</td><td>9</td><td>5</td><td>3</td><td>4</td><td><span class="badge ok">On track</span></td></tr>
+          <tr data-section="pipeline" data-func="Retail">
+  <td>Retail
+    <button class="info-btn" data-copilot="pipeline:Retail" aria-label="Open Retail plan">i</button>
+  </td>
+  <td>31</td><td>17</td><td>12</td><td>14</td>
+  <td><span class="badge danger">Risk</span></td>
+</tr>
+          <tr><td>Customer Care</td><td>22</td><td>14</td><td>7</td><td>10</td><td><span class="badge ok">On track</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note">SLA: redeploy ≤ 60 days; at-risk staff enter managed bench with guaranteed backfill via TAPFIN.</div>
+    </div>
+
+    <aside>
+      <h2>MEOS Signals</h2>
+      <div class="kpi">
+        <div class="label">Global Net Employment Outlook (Q3-2025)</div>
+        <div class="hero-num">24%</div>
+        <svg class="spark" viewBox="0 0 100 20" aria-hidden="true">
+          <polyline fill="none" stroke="#7db1ff" stroke-width="2"
+            points="0,15 15,14 30,13 45,10 60,10 75,10 90,10 100,9"/>
+        </svg>
+        <div class="note">U.S. climate: “stable” hiring in Q3-2025; IT remains strongest sector globally.</div>
+        <div class="chips">
+          <span class="chip">Source: MEOS Q3-2025</span>
+          <span class="chip">IT outlook strong</span>
+        </div>
+      </div>
+      <h2 style="margin-top:14px">Talent Shortage (2025)</h2>
+      <div class="kpi">
+        <div class="label">Employers reporting shortages</div>
+        <div class="hero-num">74%</div>
+        <div class="progress"><span style="width:74%"></span></div>
+        <div class="note">Use reskill-to-place pathways to convert shortages into internal fills.</div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Skills heatmap + compliance/backfill -->
+  <section class="section grid-2">
+    <div>
+      <h2>Skills Heatmap (Adjacency Matches)
+  <span class="tip">
+    <button class="info-btn" data-copilot="heatmap_overview" aria-label="Explain heatmap">i</button>
+    <span class="tip-bubble">Shows source→target role overlaps, required training hours, and placement confidence.</span>
+  </span>
+</h2>
+
+      <table class="table" aria-label="Skills heatmap">
+        <thead><tr><th>Source role</th><th>Target role</th><th>Overlap</th><th>Training hrs</th><th>Placement Confidence</th></tr></thead>
+        <tbody>
+          <tr data-section="heatmap" data-path="Salesforce Admin→Data Analyst (RevOps)">
+  <td>Salesforce Admin
+    <button class="info-btn" data-copilot="path:Salesforce→RevOps" aria-label="Open RevOps path">i</button>
+  </td>
+  <td>Data Analyst (RevOps)</td><td>78%</td><td>60</td><td><span class="badge ok">High</span></td>
+</tr>
+
+          <tr><td>Field Tech</td><td>IoT Support Eng.</td><td>72%</td><td>80</td><td><span class="badge ok">High</span></td></tr>
+          <tr><td>Retail Lead</td><td>CX Ops Manager</td><td>63%</td><td>50</td><td><span class="badge warn">Med</span></td></tr>
+          <tr><td>AR/AP Clerk</td><td>Data Steward</td><td>58%</td><td>90</td><td><span class="badge warn">Med</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note">Adjacency powered by AI skills graph; learning is only offered when a matching role exists (train-to-place).</div>
+    </div>
+    <div>
+      <h2>Backfill & Compliance</h2>
+      <div class="kpi">
+        <div class="label">Instant backfill available</div>
+        <div class="value">46 roles</div>
+        <div class="progress"><span style="width:82%"></span></div>
+        <div class="delta up">via TAPFIN supplier bench</div>
+      </div>
+      <div class="kpi">
+        <div class="label">IR35/SoW cleared</div>
+        <div class="value">99.1%</div>
+        <div class="progress"><span style="width:99%"></span></div>
+        <div class="delta up">audit-ready</div>
+      </div>
+      <hr/>
+      <h2>ROI Snapshot</h2>
+      <div class="kpi">
+        <div class="label">Avoided external hires</div>
+        <div class="value">+47 FTE</div>
+        <div class="progress"><span style="width:70%"></span></div>
+        <div class="delta up">CFO verified</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Sources</h2>
+    <div class="note">
+      Global NEO 24% (Q3-2025) and sector notes from ManpowerGroup MEOS; 2025 Talent Shortage 74% from ManpowerGroup. 
+      <a href="https://www.manpowergroup.com/en/insights/report/q3-2025-manpowergroup-employment-outlook-survey">MEOS Q3-2025</a> ·
+      <a href="https://go.manpowergroup.com/hubfs/MEOS%20Q3%202025/MPG-MEOS-Q3-2025-Global-Infographic.pdf">MEOS Infographic</a> ·
+      <a href="https://go.manpowergroup.com/talent-shortage">Talent Shortage 2025</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">ICMaaS demo UI — outcome-first mobility with MEOS + TAPFIN</footer>
+
+
+<!-- Copilot Backdrop + Drawer -->
+<div class="drawer-backdrop" id="copilotBackdrop"></div>
+
+<aside class="drawer" id="copilotDrawer" role="dialog" aria-modal="true" aria-labelledby="copilotTitle" tabindex="-1">
+  <header>
+    <h3 id="copilotTitle">ICM Copilot</h3>
+    <button class="close" id="homeCopilot" aria-label="Home">Home</button>
+    <button class="close" id="closeCopilot" aria-label="Close">✕</button>
+  </header>
+
+  <main>
+    <!-- In-context analysis (reads current KPIs/sections) -->
+    <section class="panel">
+      <h4>Auto-analysis (now)</h4>
+      <p class="small">Based on visible KPIs and pipeline on this page.</p>
+      <ul class="list">
+        <li><strong>Redeployment 61%</strong> (target 65%): trending up; keep SLA discipline (≤60 days).</li>
+        <li><strong>Avg time 42d</strong>: within target; Retail function flagged <em>Risk</em> in pipeline → prioritize backfills.</li>
+        <li><strong>Internal fill 38%</strong>: opportunity to lift to 45% by enforcing manager release + instant backfill.</li>
+        <li><strong>MEOS backdrop</strong>: Global NEO ~24%; IT demand strong → favor Data/IoT pathways.</li>
+      </ul>
+      <div class="tagrow">
+        <span class="tag">SLA ≤60d</span><span class="tag">Backfill</span><span class="tag">Internal Fill</span><span class="tag">MEOS/IT+</span>
+      </div>
+    </section>
+
+    <!-- 3–6 month actions -->
+    <section class="panel">
+      <h4>Actions · Next 3–6 months</h4>
+      <ul class="list">
+        <li><strong>Retail → CX Ops</strong> train-to-place bundle (50–60h) for team leads; guarantee interviews on completion.</li>
+        <li><strong>Manager release SLA</strong>: sign-off within 7 days; <em>instant backfill</em> via TAPFIN bench to stop hoarding.</li>
+        <li><strong>Lift internal fill → 45%</strong>: publish hidden gigs & stretch projects into the marketplace (weekly cadence).</li>
+        <li><strong>CFO dashboard</strong>: attribute CHF savings to avoided external hires (+47 FTE) and faster time-to-productivity.</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="#open-bench">Open backfill bench</a>
+        <a class="btn secondary" href="https://www.manpowergroup.com/en/insights/report/q3-2025-manpowergroup-employment-outlook-survey" target="_blank" rel="noopener">MEOS Q3-2025</a>
+      </div>
+    </section>
+
+    <!-- 6–12 month roadmap -->
+    <section class="panel">
+      <h4>Roadmap · 6–12 months</h4>
+      <ul class="list">
+        <li><strong>Predictive supply planning</strong>: fuse MEOS sector signals + internal skills graph for 3/6/12-month forecasts.</li>
+        <li><strong>Outcome pricing</strong>: switch to success-based redeployment fees tied to SLA + retention at 9 months.</li>
+        <li><strong>Compliance automation</strong>: keep IR35/SoW ≥99% clearances; exportable audit trail.</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="#roi-template">Download ROI model (xls)</a>
+        <a class="btn secondary" href="#policy-pack">Manager release policy pack</a>
+      </div>
+    </section>
+
+    <!-- Learning / sources -->
+    <section class="panel">
+      <h4>Suggested playbooks & sources</h4>
+      <ul class="list">
+        <li><a href="#playbook-redeploy">Redeploy-in-60d playbook</a> · <span class="small">templates & comms</span></li>
+        <li><a href="#bundle-revops">Sales Ops → RevOps Data Analyst (60h)</a> · <span class="small">SQL + CRM data</span></li>
+        <li><a href="https://go.manpowergroup.com/talent-shortage" target="_blank" rel="noopener">Talent Shortage 2025</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+  <div class="copilot-intro">Hi, I’m your Career Copilot. Ask me anything…</div>
+
+  <form class="copilot-chat" id="copilotForm">
+    <input type="text" id="userInput" placeholder="Type your question…" />
+    <button type="submit">Send</button>
+  </form>
+</footer>
+</aside>
+
+
+<!-- COPILOT DRAWER -->
+
+<script>
+(function(){
+  const openBtn  = document.getElementById('openCopilot');
+  const closeBtn = document.getElementById('closeCopilot');
+  const homeBtn  = document.getElementById('homeCopilot');
+  const drawer   = document.getElementById('copilotDrawer');
+  const backdrop = document.getElementById('copilotBackdrop');
+  const mainEl   = drawer.querySelector('main');
+
+  // cache the static overview HTML
+  const initialOverview = mainEl.innerHTML;
+
+  function renderOverview(){
+    mainEl.innerHTML = initialOverview;
+  }
+
+
+  // ---- SINGLE source of truth for mappings (includes kpi_plan)
+  const templates = {
+    'kpi_plan': {
+      title: 'KPI Uplift Plan',
+      bullets: [
+        'Raise redeployment 61% → 65%: enforce ≤60d SLA; weekly exceptions review.',
+        'Cut time-to-redeploy 42d → 35d: pre-match at-risk employees before notice.',
+        'Lift internal fill 38% → 45%: publish stretch gigs; mandate manager release + instant backfill.',
+        'Quantify savings in CFO dashboard: avoided hires (+47 FTE) & faster time-to-productivity.'
+      ],
+      actions: [
+        { label: 'Open backfill bench', href: '#open-bench' },
+        { label: 'MEOS Q3–2025', href: 'https://www.manpowergroup.com/en/insights/report/q3-2025-manpowergroup-employment-outlook-survey', ext: true }
+      ]
+    },
+
+    'kpi_overview': { overview: true },
+
+    'heatmap_overview': {
+      title: 'How to use the skills heatmap',
+      bullets: [
+        'Prioritize paths with overlap ≥70% & training ≤80h for ≤60d redeploys.',
+        'Commit only to train-to-place paths with confirmed openings.'
+      ],
+      actions: [
+        {label:'See ROI model', href:'#roi-template'},
+        {label:'Talent Shortage 2025', href:'https://go.manpowergroup.com/talent-shortage', ext:true}
+      ]
+    },
+
+    'pipeline:Retail': {
+      title: 'Action Plan · Retail (Risk)',
+      bullets: [
+        'Deploy Retail→CX Ops bundle (50–60h) with guaranteed interviews.',
+        'Spin up 2 interim backfills via TAPFIN to unlock manager releases.',
+        'Weekly stand-up on placements; flag >30d cases to PMO.'
+      ],
+      actions: [
+        {label:'Open Retail candidates', href:'#retail-candidates'},
+        {label:'CX Ops bundle', href:'#bundle-cxops'}
+      ]
+    },
+
+    'pipeline:Sales Ops': {
+      title: 'Action Plan · Sales Ops',
+      bullets: [
+        'Pre-match at-risk associates to RevOps Analyst; start 60h SQL/CRM track.',
+        'Schedule manager releases with instant backfill to keep quotas covered.'
+      ],
+      actions: [
+        {label:'Open Sales Ops candidates', href:'#salesops-candidates'},
+        {label:'RevOps bundle', href:'#bundle-revops'}
+      ]
+    },
+
+    'pipeline:Field Service': {
+      title: 'Action Plan · Field Service',
+      bullets: [
+        'Path to IoT Support Engineer (72% overlap, ~80h training).',
+        'Stage 1 backfills from TAPFIN bench to free critical releases.'
+      ],
+      actions: [
+        {label:'Open Field Service candidates', href:'#field-candidates'},
+        {label:'IoT Support bundle', href:'#bundle-iot'}
+      ]
+    },
+
+    'path:Salesforce→RevOps': {
+      title: 'Path · Salesforce Admin → Data Analyst (RevOps)',
+      bullets: [
+        'Overlap 78% · Training 60h (SQL for RevOps + CRM data models).',
+        'Guarantee interview on completion; target placement ≤45 days.'
+      ],
+      actions: [
+        {label:'Assign cohort', href:'#assign-cohort'},
+        {label:'Training outline', href:'#training-revops'}
+      ]
+    }
+  };
+
+  // ---- Render a contextual panel (no more accidental overview on unknown keys)
+  function renderContext(key){
+    const t = templates[key];
+    if (t?.overview) { renderOverview(); return; }
+    if (!t) {
+      mainEl.innerHTML = `
+        <section class="panel">
+          <h4>Context not mapped</h4>
+          <p class="small">No playbook found for <code>${key}</code>. Check the data-copilot key or add a template entry.</p>
+        </section>`;
+      return;
+    }
+    const html = `
+      <section class="panel"><h4>${t.title}</h4>
+        <ul class="list">${t.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+      </section>
+      <section class="panel"><h4>Next steps</h4>
+        <div class="actions">
+          ${t.actions.map(a=>`<a class="btn${a.secondary?' secondary':''}" ${a.ext?'target="_blank" rel="noopener"':''} href="${a.href}">${a.label}</a>`).join('')}
+        </div>
+      </section>`;
+    mainEl.innerHTML = html;
+  }
+
+  function openDrawer(contextKey){
+    if (contextKey) renderContext(contextKey); else renderOverview();
+    drawer.classList.add('open'); backdrop.classList.add('open');
+    openBtn?.setAttribute('aria-expanded','true'); drawer.focus();
+  }
+  function closeDrawer(){
+    drawer.classList.remove('open'); backdrop.classList.remove('open');
+    openBtn?.setAttribute('aria-expanded','false');
+  }
+
+  // Main button → Overview
+  openBtn.addEventListener('click', ()=> openDrawer());
+
+  // Header buttons
+  homeBtn?.addEventListener('click', renderOverview);
+  closeBtn.addEventListener('click', closeDrawer);
+  backdrop.addEventListener('click', closeDrawer);
+  window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeDrawer(); });
+
+  // Info “i” buttons → Contextual
+  document.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.info-btn');
+    if (!btn) return;
+    const key = btn.getAttribute('data-copilot');
+    openDrawer(key);
+  });
+})();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

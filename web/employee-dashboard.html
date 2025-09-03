@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Employee Dashboard · ICMaaS</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo" aria-hidden="true"></div>
+    <div>
+      <h1>ICMaaS · Employee</h1>
+      <div class="sub">Your growth, inside the company — powered by a trusted neutral broker</div>
+    </div>
+  </div>
+  <div class="chips">
+    <span class="chip">Placement confidence is data-driven</span>
+    <span class="chip">Market feed: MEOS Q3-2025</span>
+  </div>
+  <button class="copilot-toggle" id="openCopilot" aria-expanded="false" aria-controls="copilotDrawer">
+  Career Copilot
+</button>
+
+</header>
+
+<main>
+  <!-- Personal KPIs -->
+  <section class="section">
+    <h2>My Mobility Snapshot
+  <span class="tip">
+    <button class="info-btn" data-copilot="my_snapshot" aria-label="Explain snapshot">i</button>
+    <span class="tip-bubble">Placement confidence, time to next role, active courses, and employability trend.</span>
+  </span>
+</h2>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="label">Placement confidence</div>
+        <div class="value">83%</div>
+        <div class="progress"><span style="width:83%"></span></div>
+        <div class="delta up">Based on matches & market</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Time to next role</div>
+        <div class="value">45 days</div>
+        <div class="progress"><span style="width:60%"></span></div>
+        <div class="delta up">SLA: ≤ 60 days</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Courses in progress</div>
+        <div class="value">3</div>
+        <div class="progress"><span style="width:50%"></span></div>
+        <div class="delta up">train-to-place</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Employability score</div>
+        <div class="value">+15%</div>
+        <div class="progress"><span style="width:75%"></span></div>
+        <div class="delta up">vs last quarter</div>
+      </div>
+    </div>
+    <div class="note">Confidence blends internal demand, MEOS sector outlook, skills overlap, and completion of required learning.</div>
+  </section>
+
+  <!-- Career path explorer -->
+  <section class="section">
+    <h2>Career Path Explorer</h2>
+    <div class="card-row">
+      <div class="role">
+        <div>
+          <strong>Data Analyst (RevOps)</strong>
+          <div class="meta">Match 78% · Exp pay change +7–12% · 60h training</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Guaranteed interview</span>
+          <span class="chip">High demand (MEOS IT+)</span>
+          <a class="chip" href="#apply1">1-click apply</a>
+          <button class="info-btn" data-copilot="role:Data Analyst (RevOps)" aria-label="Open RevOps plan">i</button>
+        </div>
+      </div>
+      <div class="role">
+        <div>
+          <strong>IoT Support Engineer</strong>
+          <div class="meta">Match 72% · Exp pay change +5–10% · 80h training</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Coach session</span>
+          <span class="chip">High demand</span>
+          <a class="chip" href="#apply2">1-click apply</a>
+        </div>
+      </div>
+      <div class="role">
+        <div>
+          <strong>CX Operations Manager</strong>
+          <div class="meta">Match 63% · Exp pay change +3–8% · 50h training</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Shadow a project</span>
+          <a class="chip" href="#apply3">1-click apply</a>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <div class="timeline">
+      <span class="dot"></span><span> Today</span>
+      <span class="dot"></span><span> Complete “SQL for RevOps”</span>
+      <span class="dot"></span><span> Shadow project</span>
+      <span class="dot"></span><span> Interview (guaranteed)</span>
+      <span class="dot dim"></span><span> Start new role</span>
+    </div>
+  </section>
+
+  <!-- Learning hub + wallet -->
+  <section class="section grid-2">
+    <div>
+      <h2>Reskill-to-Place Program</h2>
+      <table class="table">
+        <thead><tr><th>Module</th><th>Hours</th><th>Status</th><th>Weight</th></tr></thead>
+        <tbody>
+          <tr>
+  <td>SQL for Revenue Analytics
+    <button class="info-btn" data-copilot="module:SQL for RevOps" aria-label="Open SQL module tips">i</button>
+  </td>
+  <td>20</td><td><span class="badge ok">In progress</span></td><td>30%</td>
+</tr>
+
+          <tr><td>Data Storytelling</td><td>16</td><td><span class="badge warn">Queued</span></td><td>20%</td></tr>
+          <tr><td>CRM Data Models (Salesforce)</td><td>24</td><td><span class="badge warn">Queued</span></td><td>30%</td></tr>
+          <tr><td>Interview Prep (Case)</td><td>8</td><td><span class="badge ok">Scheduled</span></td><td>20%</td></tr>
+        </tbody>
+      </table>
+      <div class="note">Only activated when matching openings exist (no “empty training”).</div>
+    </div>
+    <aside>
+      <h2>Financial Outlook</h2>
+      <div class="kpi">
+        <div class="label">Projected comp after move</div>
+        <div class="value">CHF 96–102k</div>
+        <div class="progress"><span style="width:70%"></span></div>
+        <div class="delta up">based on internal bands</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Mobility bonus eligibility</div>
+        <div class="value">Yes</div>
+        <div class="progress"><span style="width:100%"></span></div>
+        <div class="delta up">paid on start</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Market confidence (MEOS sector)</div>
+        <div class="value">Strong</div>
+        <div class="progress"><span style="width:85%"></span></div>
+        <div class="delta up">IT outlook leads sectors</div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section">
+    <h2>Sources</h2>
+    <div class="note">
+      Market signals inform your match & confidence scores: 
+      <a href="https://www.manpowergroup.com/en/insights/report/q3-2025-manpowergroup-employment-outlook-survey">MEOS Q3-2025</a> ·
+      <a href="https://go.manpowergroup.com/talent-shortage">Talent Shortage 2025</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">ICMaaS demo UI — employee view</footer>
+
+
+<!-- Copilot Backdrop + Drawer -->
+<div class="drawer-backdrop" id="copilotBackdrop"></div>
+
+<aside class="drawer" id="copilotDrawer" role="dialog" aria-modal="true" aria-labelledby="copilotTitle" tabindex="-1">
+  <header>
+    <h3 id="copilotTitle">Job Copilot · Employee</h3>
+    <button class="close" id="homeCopilot" aria-label="Home">Home</button>
+    <button class="close" id="closeCopilot" aria-label="Close">✕</button>
+  </header>
+
+  <main>
+    <!-- In-context analysis -->
+    <section class="panel">
+      <h4>Your snapshot</h4>
+      <p class="small">Reading the KPIs on this page.</p>
+      <ul class="list">
+        <li><strong>Placement confidence 83%</strong> → strong; target 85–90% after next module.</li>
+        <li><strong>Time to next role 45d</strong> within SLA; complete <em>SQL for RevOps</em> to lock interview window.</li>
+        <li><strong>Employability +15%</strong> QoQ; boost with a shadow project + portfolio sample.</li>
+      </ul>
+      <div class="tagrow">
+        <span class="tag">Guaranteed interview</span><span class="tag">Train-to-place</span><span class="tag">Portfolio</span>
+      </div>
+    </section>
+
+    <!-- 30–90 days -->
+    <section class="panel">
+      <h4>Next 30–90 days</h4>
+      <ul class="list">
+        <li>Finish <strong>SQL for Revenue Analytics (20h)</strong> → unlock interview for <em>Data Analyst (RevOps)</em>.</li>
+        <li>Book a <strong>coach session</strong> to practice data storytelling (15 min prep + 30 min session).</li>
+        <li>Join a <strong>shadow project</strong> in RevOps; capture 1 portfolio screenshot of your analysis.</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="#enroll-sql">Resume SQL module</a>
+        <a class="btn secondary" href="#book-coach">Book coach</a>
+      </div>
+    </section>
+
+    <!-- 3–12 months -->
+    <section class="panel">
+      <h4>3–12 months growth plan</h4>
+      <ul class="list">
+        <li>Complete <strong>CRM Data Models (Salesforce, 24h)</strong> → raise match from 78% → ~85%.</li>
+        <li>Earn an internal <strong>RevOps certification</strong>; aim for <em>Data Analyst</em> → <em>Senior Analyst</em> path in 9–12m.</li>
+        <li>Track <strong>market confidence (MEOS)</strong> each quarter to pick electives with the best career ROI.</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="#crm-module">Start CRM module</a>
+        <a class="btn secondary" href="https://www.manpowergroup.com/en/insights/report/q3-2025-manpowergroup-employment-outlook-survey" target="_blank" rel="noopener">MEOS (market outlook)</a>
+      </div>
+    </section>
+
+    <!-- Quick links -->
+    <section class="panel">
+      <h4>Quick links</h4>
+      <ul class="list">
+        <li><a href="#apply-revops">1-click apply: Data Analyst (RevOps)</a></li>
+        <li><a href="#interview-prep">Interview prep kit (case + SQL)</a></li>
+        <li><a href="#comp-guidance">Comp bands & mobility bonus</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+  <div class="copilot-intro">Hi, I’m your Career Copilot. Ask me anything…</div>
+
+  <form class="copilot-chat" id="copilotForm">
+    <input type="text" id="userInput" placeholder="Type your question…" />
+    <button type="submit">Send</button>
+  </form>
+</footer>
+</aside>
+
+<script>
+(function(){
+  const openBtn = document.getElementById('openCopilot');
+  const closeBtn = document.getElementById('closeCopilot');
+  const homeBtn  = document.getElementById('homeCopilot');
+  const drawer = document.getElementById('copilotDrawer');
+  const backdrop = document.getElementById('copilotBackdrop');
+  const mainEl = drawer.querySelector('main');
+
+  function renderOverview(){
+    const tpl = document.getElementById('copilotOverviewEmployee');
+    if (tpl) mainEl.innerHTML = tpl.innerHTML;
+  }
+
+  const templates = {
+    'my_snapshot': { overview: true },
+    'role:Data Analyst (RevOps)': {
+      title: 'Plan · Data Analyst (RevOps)',
+      bullets: [
+        'Complete SQL for Revenue Analytics (20h) and CRM Data Models (24h).',
+        'Add one shadow project deliverable (portfolio screenshot) before interview.'
+      ],
+      actions: [
+        {label:'1-click apply', href:'#apply-revops'},
+        {label:'Interview prep kit', href:'#interview-prep'}
+      ]
+    },
+    'module:SQL for RevOps': {
+      title: 'Tips · SQL for Revenue Analytics',
+      bullets: [
+        'Focus on window functions and CRM schema joins; these appear in the case.',
+        'Upload your practice query as a portfolio snippet to boost confidence +3–5 pts.'
+      ],
+      actions: [
+        {label:'Resume module', href:'#enroll-sql'},
+        {label:'See example portfolio', href:'#portfolio-sample'}
+      ]
+    }
+  };
+
+  function renderContext(key){
+    const t = templates[key];
+    if (!t || t.overview) { renderOverview(); return; }
+    const html = `
+      <section class="panel"><h4>${t.title}</h4>
+        <ul class="list">${t.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+      </section>
+      <section class="panel"><h4>Next steps</h4>
+        <div class="actions">
+          ${t.actions.map(a=>`<a class="btn${a.secondary?' secondary':''}" ${a.ext?'target="_blank" rel="noopener"':''} href="${a.href}">${a.label}</a>`).join('')}
+        </div>
+      </section>`;
+    mainEl.innerHTML = html;
+  }
+
+  function openDrawer(contextKey){
+    if (contextKey) renderContext(contextKey); else renderOverview();
+    drawer.classList.add('open'); backdrop.classList.add('open');
+    openBtn?.setAttribute('aria-expanded','true'); drawer.focus();
+  }
+  function closeDrawer(){
+    drawer.classList.remove('open'); backdrop.classList.remove('open');
+    openBtn?.setAttribute('aria-expanded','false');
+  }
+
+  openBtn.addEventListener('click', ()=> openDrawer());
+  homeBtn.addEventListener('click', renderOverview);
+  closeBtn.addEventListener('click', closeDrawer);
+  backdrop.addEventListener('click', closeDrawer);
+  window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeDrawer(); });
+
+  document.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.info-btn');
+    if (!btn) return;
+    const key = btn.getAttribute('data-copilot');
+    openDrawer(key);
+  });
+})();
+</script>
+
+
+
+
+</body>
+</html>

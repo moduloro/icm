@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>My Next Chapter — Story Mode</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Compact header: brand + Copilot only (no pills) -->
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>My Next Chapter</h1>
+        <div class="sub">Internal Career Mobility · ICMaaS</div>
+      </div>
+    </div>
+
+    <button class="copilot-toggle" id="openCopilot" aria-expanded="false" aria-controls="copilotDrawer">
+      Career Copilot
+    </button>
+  </header>
+
+  <!-- NEW: Title area on body background (no white tile / no card) -->
+  <div class="title-area" style="padding: 20px 40px 0px 40px;">
+    <h2 style="margin:0 0px 0px 0;">Welcome back Alex, let’s continue your career development path</h2>
+    <p class="small" style="margin:0px;">
+      Current role: Customer Operations Specialist (CX Ops)
+      &nbsp;·&nbsp; Market feed: MEOS — IT/Data outlook strong
+    </p>
+  </div>
+
+  <main>
+
+    <!-- Where you stand today -->
+    <section class="section">
+      <h2>Where you stand today
+        <span class="tip">
+          <button class="info-btn" data-copilot="snapshot_explain" aria-label="Explain snapshot">i</button>
+          <span class="tip-bubble">A simple read on readiness, based on your skills, learning, and market signals.</span>
+        </span>
+      </h2>
+
+      <p class="note">You’ve built strong CX and CRM instincts. The market is leaning into data + automation — that’s where your strengths can grow next.</p>
+
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="label">Readiness · RevOps Data Analyst</div>
+          <div class="value">78%</div>
+          <div class="progress"><span style="width:78%"></span></div>
+          <div class="delta up">Finish “SQL for RevOps” to cross 85%</div>
+        </div>
+        <div class="kpi">
+  <div class="label">
+    Time to next step
+    <button class="info-btn" data-copilot="sla_explain" aria-label="Explain SLA">i</button>
+  </div>
+  <div class="value">~45 days</div>
+  <div class="progress"><span style="width:60%"></span></div>
+  <div class="delta up">Within redeploy SLA ≤60d</div>
+</div>
+        <div class="kpi">
+          <div class="label">Momentum (last 30d)</div>
+          <div class="value">Good</div>
+          <div class="progress"><span style="width:70%"></span></div>
+          <div class="delta up">2 modules, 1 shadow session</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Confidence to interview</div>
+          <div class="value">Rising</div>
+          <div class="progress"><span style="width:65%"></span></div>
+          <div class="delta up">Add a 1-page story slide</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why move now -->
+    <section class="section">
+      <h2>Why start moving & upskilling now?
+        <span class="tip">
+          <button class="info-btn" data-copilot="why_now" aria-label="Why now">i</button>
+          <span class="tip-bubble">We connect your strengths to where demand is growing.</span>
+        </span>
+      </h2>
+      <div class="card-row">
+        <div class="role">
+          <div>
+            <strong>Keep up with global skill trends</strong>
+            <div class="meta">MEOS shows sustained demand for Data/IT roles connected to customer value.</div>
+          </div>
+          <div class="chips"><span class="chip">Future-proof</span><span class="chip">Data literacy</span></div>
+        </div>
+        <div class="role">
+          <div>
+            <strong>Increase internal career options</strong>
+            <div class="meta">Upskilling lifts your match% and opens higher-impact roles — without leaving your team.</div>
+          </div>
+          <div class="chips"><span class="chip">Job enrichment</span><span class="chip">Internal first</span></div>
+        </div>
+        <div class="role">
+          <div>
+            <strong>Short path from where you are</strong>
+            <div class="meta">We focus on “least effort → highest chance” transitions from CX Ops.</div>
+          </div>
+          <div class="chips"><span class="chip">Adjacent skills</span><span class="chip">Low risk</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closest options -->
+    <section class="section">
+      <h2>Closest next roles (least effort → highest success)</h2>
+      <div class="card-row">
+        <div class="role selected">
+  <div>
+    <strong>Data Analyst (RevOps)</strong>
+    <span class="badge-selected">✓ Chosen path</span>
+    <div class="meta">Match 78% · Effort ~60h · Chance High</div>
+  </div>
+  <div class="chips">
+    <span class="chip">Builds on CX + CRM</span>
+    <a class="chip" href="#express-revops">Express interest</a>
+    <button class="info-btn" data-copilot="role_revops" aria-label="More about RevOps">i</button>
+  </div>
+</div>
+
+        <div class="role">
+          <div>
+            <strong>CX Insights Specialist</strong>
+            <div class="meta">Match 74% · Effort ~40h · Chance High</div>
+          </div>
+          <div class="chips">
+            <span class="chip">Data storytelling</span>
+            <a class="chip" href="#express-cxinsights">Express interest</a>
+            <button class="info-btn" data-copilot="role_cxinsights" aria-label="More about CX Insights">i</button>
+          </div>
+        </div>
+
+        <div class="role">
+          <div>
+            <strong>CRM Analyst (Salesforce)</strong>
+            <div class="meta">Match 70% · Effort ~56h · Chance Medium-High</div>
+          </div>
+          <div class="chips">
+            <span class="chip">Schema & data models</span>
+            <a class="chip" href="#express-crm">Express interest</a>
+            <button class="info-btn" data-copilot="role_crm" aria-label="More about CRM Analyst">i</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Your chosen path -->
+    <section class="section">
+      <h2>Your chosen path: RevOps Data Analyst</h2>
+
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="label">SQL for Revenue Analytics (20h)</div>
+          <div class="value">14/20h</div>
+          <div class="progress"><span style="width:70%"></span></div>
+          <div class="delta up">On track — finish Lesson 3 next</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Data Storytelling (16h)</div>
+          <div class="value">0/16h</div>
+          <div class="progress"><span style="width:5%"></span></div>
+          <div class="delta">Queued — plan 2h this week</div>
+        </div>
+        <div class="kpi">
+          <div class="label">CRM Data Models (24h)</div>
+          <div class="value">0/24h</div>
+          <div class="progress"><span style="width:0%"></span></div>
+          <div class="delta">Queued — unlocks +7% match</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Portfolio story slide</div>
+          <div class="value">Draft</div>
+          <div class="progress"><span style="width:40%"></span></div>
+          <div class="delta warn">Behind — add one real example</div>
+        </div>
+      </div>
+
+      <div class="card-row" style="margin-top:10px">
+        <div class="role">
+          <div>
+            <strong>Where to focus this week</strong>
+            <div class="meta">Finish SQL Lesson 3 + add one screenshot to your story slide.</div>
+          </div>
+          <div class="chips">
+            <a class="chip" href="#resume-sql">Resume SQL</a>
+            <a class="chip" href="#portfolio">Open portfolio</a>
+            <button class="info-btn" data-copilot="focus_week" aria-label="Why these steps">i</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internal openings now -->
+    <section class="section">
+      <h2>Internal openings in reach (after finishing SQL)</h2>
+      <table class="table">
+        <thead><tr><th>Role</th><th>Team</th><th>Location</th><th>Why in reach</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Data Analyst (RevOps) · Junior</td>
+            <td>Revenue Operations</td>
+            <td>Zurich / Hybrid</td>
+            <td>Match 85% once SQL complete; CX background valued</td>
+            <td><a href="#apply-revops" class="chip">1-click apply</a></td>
+          </tr>
+          <tr>
+            <td>CX Insights Specialist</td>
+            <td>Customer Experience</td>
+            <td>Remote (EU)</td>
+            <td>High fit with CRM + support analytics</td>
+            <td><a href="#apply-cx" class="chip">Express interest</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note">Tip: book your interview window as soon as the module is complete — momentum matters.</div>
+    </section>
+
+    <!-- 3–6 months outlook -->
+    <section class="section">
+      <h2>In 3–6 months (add one skillset)</h2>
+      <div class="card-row">
+        <div class="role">
+          <div>
+            <strong>Senior Data Analyst (RevOps)</strong>
+            <div class="meta">Add CRM Data Models (+7% match) + 1 deeper case</div>
+          </div>
+          <div class="chips"><span class="chip">Career step</span><span class="chip">Mentor juniors</span></div>
+        </div>
+        <div class="role">
+          <div>
+            <strong>Product Data Analyst (CX)</strong>
+            <div class="meta">Add Feature instrumentation + Experiment basics</div>
+          </div>
+          <div class="chips"><span class="chip">Job enrichment</span><span class="chip">Close to product</span></div>
+        </div>
+        <div class="role">
+          <div>
+            <strong>CRM Analyst (Salesforce)</strong>
+            <div class="meta">Complete schema + data model track</div>
+          </div>
+          <div class="chips"><span class="chip">Admin-lite</span><span class="chip">Data quality impact</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sources -->
+    <section class="section">
+      <h2>Sources</h2>
+      <div class="note">
+        Confidence & “why now” are informed by market signals and internal demand:
+        <a href="https://www.manpowergroup.com/en/insights/report/q3-2025-manpowergroup-employment-outlook-survey" target="_blank" rel="noopener">MEOS Q3-2025</a> ·
+        <a href="https://go.manpowergroup.com/talent-shortage" target="_blank" rel="noopener">Talent Shortage 2025</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">Story Mode — gentle guidance, one step at a time</footer>
+
+  <!-- Copilot Backdrop + Drawer -->
+  <div class="drawer-backdrop" id="copilotBackdrop" aria-hidden="true"></div>
+
+  <aside class="drawer" id="copilotDrawer" role="dialog" aria-modal="true" aria-labelledby="copilotTitle" tabindex="-1">
+    <header>
+  <h3 id="copilotTitle">Career Copilot</h3>
+  <button class="close" id="homeCopilot" aria-label="Home">Home</button>
+  <button class="close" id="closeCopilot" aria-label="Close">✕</button>
+</header>
+
+    <!-- Cached overview -->
+    <main>
+      <section class="panel">
+        <h4>Your snapshot</h4>
+        <ul class="list">
+          <li>Strong CX base → great fit for RevOps data work.</li>
+          <li>Finish SQL Lesson 3 to unlock your interview window.</li>
+          <li>Add one portfolio story slide — we’ll help shape it.</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="#resume-sql">Resume SQL</a>
+          <a class="btn secondary" href="#book-coach">Book coach</a>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h4>Next 30–60 days</h4>
+        <ul class="list">
+          <li>Complete SQL for Revenue Analytics (20h) — Lesson 3 next.</li>
+          <li>Shadow one RevOps weekly sync; capture 3 insights.</li>
+          <li>Create a one-page “story slide” from real work.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h4>Encouragement & tips</h4>
+        <ul class="list">
+          <li>Progress over perfection — small steps compound.</li>
+          <li>Real examples beat hypothetical cases in interviews.</li>
+          <li>Ask your manager for 2h/week; we’ll arrange backfill if needed.</li>
+        </ul>
+      </section>
+    </main>
+   
+
+<footer>
+  <div class="copilot-intro">Hi, I’m your Career Copilot. Ask me anything…</div>
+
+  <form class="copilot-chat" id="copilotForm">
+    <input type="text" id="userInput" placeholder="Type your question…" />
+    <button type="submit">Send</button>
+  </form>
+</footer>
+
+
+     <!-- Chat interface -->
+
+    
+
+
+  </aside>
+
+  <script>
+  (function(){
+    const openBtn  = document.getElementById('openCopilot');
+    const closeBtn = document.getElementById('closeCopilot');
+    const homeBtn  = document.getElementById('homeCopilot');
+    const drawer   = document.getElementById('copilotDrawer');
+    const backdrop = document.getElementById('copilotBackdrop');
+    const mainEl   = drawer.querySelector('main');
+
+    // Cache the initial drawer HTML as the “overview”
+    const initialOverview = mainEl.innerHTML;
+    function renderOverview(){ mainEl.innerHTML = initialOverview; }
+
+    // Context panels
+    const templates = {
+      'snapshot_explain': {
+        title: 'What your snapshot means',
+        bullets: [
+          'Your CX/CRM strengths already cover a big part of RevOps Analyst.',
+          'We focus on one practical step each week — small wins add up.',
+          'Market demand (MEOS) supports this move; timing is good.'
+        ],
+        actions: [
+          {label:'Resume SQL', href:'#resume-sql'},
+          {label:'Book a coach', href:'#book-coach'}
+        ]
+      },
+      'why_now': {
+        title: 'Why upskill now?',
+        bullets: [
+          'Data roles adjacent to CX are growing — lift your options internally.',
+          'Shortest path from your role: SQL + story slide + RevOps shadow.',
+          'This avoids churn: keep your domain expertise, add data leverage.'
+        ],
+        actions: [
+          {label:'Express interest (RevOps)', href:'#express-revops'},
+          {label:'See career stories', href:'#stories'}
+        ]
+      },
+      'role_revops': {
+        title: 'RevOps Data Analyst — why it fits',
+        bullets: [
+          'You already speak “customer” — rare edge in prioritizing insights.',
+          'Complete SQL (20h) + CRM Models (24h) → match ~85%.',
+          'Guaranteed interview once SQL complete.'
+        ],
+        actions: [
+          {label:'1-click apply', href:'#apply-revops'},
+          {label:'Open interview kit', href:'#interview-kit'}
+        ]
+      },
+      'role_cxinsights': {
+        title: 'CX Insights Specialist — why it fits',
+        bullets: [
+          'Your daily CX patterns become lightweight analytics stories.',
+          'Data Storytelling (16h) lifts confidence in stakeholder comms.',
+          'Great job-enrichment path while staying close to the team.'
+        ],
+        actions: [
+          {label:'Express interest', href:'#apply-cx'},
+          {label:'Start Storytelling', href:'#storytelling'}
+        ]
+      },
+      'role_crm': {
+        title: 'CRM Analyst (Salesforce) — why it fits',
+        bullets: [
+          'Your CRM experience maps well to data quality & schema work.',
+          'Add CRM Data Models (24h) → +7% match and new openings.',
+          'Path into admin-lite responsibilities without a full pivot.'
+        ],
+        actions: [
+          {label:'Express interest', href:'#apply-crm'},
+          {label:'Start CRM Models', href:'#crm-models'}
+        ]
+      },
+      'focus_week': {
+        title: 'Why these steps this week',
+        bullets: [
+          'SQL Lesson 3 is the unlock for your interview window.',
+          'A single real screenshot elevates your story slide instantly.',
+          'Momentum compounds — two small wins beat big plans.'
+        ],
+        actions: [
+          {label:'Resume SQL', href:'#resume-sql'},
+          {label:'Open portfolio', href:'#portfolio'}
+        ]
+      },
+      'my_snapshot': { overview: true },
+      'sla_explain': {
+  title: 'Why this SLA matters',
+  bullets: [
+    'TAPFIN enforces strict Service Level Agreements (SLAs) for global clients — e.g., fill roles within 60 days.',
+    'We bring the same discipline to internal mobility: redeployments are targeted to move within ≤60 days, not left open-ended.',
+    'This gives you confidence that if you complete the upskilling steps, your next role will materialize quickly — just as TAPFIN guarantees for contingent workers.'
+  ],
+  actions: [
+    {label:'See current SLA policy', href:'#sla-policy'},
+    {label:'Talk to a mobility coach', href:'#book-coach'}
+  ]
+}
+    };
+
+    function renderContext(key){
+      const t = templates[key];
+      if (!t || t.overview) { renderOverview(); return; }
+      const html = `
+        <section class="panel"><h4>${t.title}</h4>
+          <ul class="list">${t.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+        </section>
+        <section class="panel"><h4>Next steps</h4>
+          <div class="actions">
+            ${t.actions.map(a=>`<a class="btn${a.secondary?' secondary':''}" href="${a.href}">${a.label}</a>`).join('')}
+          </div>
+        </section>`;
+      mainEl.innerHTML = html;
+    }
+
+    function openDrawer(contextKey){
+      if (contextKey) renderContext(contextKey); else renderOverview();
+      drawer.classList.add('open'); backdrop.classList.add('open');
+      openBtn?.setAttribute('aria-expanded','true'); drawer.focus();
+    }
+    function closeDrawer(){
+      drawer.classList.remove('open'); backdrop.classList.remove('open');
+      openBtn?.setAttribute('aria-expanded','false');
+    }
+
+    openBtn.addEventListener('click', ()=> openDrawer());   // main button → overview
+    homeBtn.addEventListener('click', renderOverview);      // Home → overview
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    window.addEventListener('keydown', e=>{ if(e.key==='Escape') closeDrawer(); });
+
+    document.addEventListener('click', e=>{
+      const btn = e.target.closest('.info-btn');
+      if (!btn) return;
+      const key = btn.getAttribute('data-copilot');
+      openDrawer(key);
+    });
+  })();
+  </script>
+</body>
+</html>
