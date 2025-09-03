@@ -191,8 +191,8 @@ main { padding: 28px 40px; display: grid; gap: 28px; }
 
 .drawer header {
   display:flex; align-items:center; justify-content:space-between;
-  padding:14px 16px; border-bottom:0px solid var(--border); background:var(--accent);
-  box-shadow: var(--shadow);
+  padding:14px 16px; border-bottom:0px solid var(--border); background:var(--accent-3);
+  box-shadow: none;
   height: 72px;  
 }
 .drawer header h3 { margin:0; font-size:16px; }
@@ -204,12 +204,16 @@ main { padding: 28px 40px; display: grid; gap: 28px; }
   color: #fff;
   background: transparent;
 }
+.drawer.scrolled header {
+  box-shadow: 0 6px 6px rgba(0,0,0,0.1);
+}
 .drawer main {
-  padding:16px;
-  overflow:auto;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .drawer .panel {
   border:0px solid var(--border);
@@ -218,19 +222,19 @@ main { padding: 28px 40px; display: grid; gap: 28px; }
   background:#F5F5F5;
   flex:0 0 auto;   /* <- ensures minimal height */
 }
-.drawer .panel h4 { margin:0 0 8px; font-size:14px; color:var(--accent); }
+.drawer .panel h4 { margin:0 0 8px; font-size:14px; color:var(--accent-3); }
 .drawer .list { margin:0; padding-left:18px; }
 .drawer .list li { margin:6px 0; }
 .drawer .actions { display:grid; gap:8px; }
 .drawer .btn {
   display:inline-flex; align-items:center; gap:8px; padding:8px 12px;
-  border-radius:8px; border:1px solid var(--border); background:#f7fbff; color:var(--accent);
+  border-radius:8px; border:1px solid var(--accent-3); background:#f7fbff; color:var(--accent-3);
   text-decoration:none; font-weight:600;
 }
 .drawer .btn.secondary { background:#fff; color:var(--text); }
 .drawer footer {
   padding: 20px 20px 20px 20px;
-  background: #efefef;
+  background: color-mix(in srgb, var(--accent-3) 20%, white);
   display: flex;
   flex-direction: column; /* stack intro above form */
   gap: 8px;
@@ -273,13 +277,7 @@ main { padding: 28px 40px; display: grid; gap: 28px; }
 /* ── Copilot Chat ─────────────────────────── */
 /* Chat row inside footer */
 
-.chat-window {
-  max-height: 220px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 0px;
-}
+
 .copilot-intro {
   font-size: 14px;
   color: var(--text);
@@ -319,20 +317,30 @@ main { padding: 28px 40px; display: grid; gap: 28px; }
 }
 
 .user-msg, .bot-msg {
-  margin: 6px 0;
-  padding: 6px 10px;
-  border-radius: 8px;
   display: inline-block;
-  max-width: 85%;
+  margin: 6px 0;
+  padding: 10px 14px;
+  border-radius: 16px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4;
 }
+/* User bubble: right side, accent tint */
 .user-msg {
-  background: #eef;
   align-self: flex-end;
-  text-align: right;
+  background: color-mix(in srgb, var(--accent-3) 20%, white);
+  color: var(--text);
+  margin-left: auto; /* push to right */
+  border-bottom-right-radius: 4px;
 }
+/* Bot bubble: left side, grey */
 .bot-msg {
-  /* background: #efe; */
-  text-align: left;
+  align-self: flex-start;
+  background: #F5F5F5;
+  color: var(--text);
+  margin-right: auto; /* push to left */
+  border-bottom-left-radius: 4px;
 }
 #copilotForm {
   display: flex;
@@ -341,20 +349,46 @@ main { padding: 28px 40px; display: grid; gap: 28px; }
 #copilotForm input {
   flex: 1;
   padding: 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--accent-3);
   border-radius: 6px;
 }
 #copilotForm button {
   padding: 8px 12px;
   border-radius: 6px;
   border: none;
-  background: var(--accent);
+  background: var(--accent-3);
   color: white;
   font-weight: 600;
   cursor: pointer;
 }
 #copilotForm button:hover {
-  background: #005fa3;
+  background: color-mix(in srgb, var(--accent-3) 50%, white);
+}
+
+/* Typing indicator */
+.typing {
+  display: inline-block;
+  position: relative;
+  width: 28px;
+  height: 10px;
+}
+
+.typing span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: typingBounce 1.4s infinite;
+}
+
+.typing span:nth-child(1) { left: 0;   animation-delay: 0s;   }
+.typing span:nth-child(2) { left: 8px; animation-delay: 0.2s; }
+.typing span:nth-child(3) { left: 16px; animation-delay: 0.4s; }
+
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
 }
 
 

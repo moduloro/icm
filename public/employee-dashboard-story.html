@@ -308,7 +308,6 @@
       </section>
     </main>
    
-
 <footer>
   <div class="copilot-intro">Hi, I’m your Career Copilot. Ask me anything…</div>
 
@@ -318,13 +317,8 @@
   </form>
 </footer>
 
-
-     <!-- Chat interface -->
-
-    
-
-
   </aside>
+  <!-- Chat interface -->
 
   <script>
   (function(){
@@ -415,17 +409,17 @@
       },
       'my_snapshot': { overview: true },
       'sla_explain': {
-  title: 'Why this SLA matters',
-  bullets: [
-    'TAPFIN enforces strict Service Level Agreements (SLAs) for global clients — e.g., fill roles within 60 days.',
-    'We bring the same discipline to internal mobility: redeployments are targeted to move within ≤60 days, not left open-ended.',
-    'This gives you confidence that if you complete the upskilling steps, your next role will materialize quickly — just as TAPFIN guarantees for contingent workers.'
-  ],
-  actions: [
-    {label:'See current SLA policy', href:'#sla-policy'},
-    {label:'Talk to a mobility coach', href:'#book-coach'}
-  ]
-}
+        title: 'Why this SLA matters',
+        bullets: [
+          'TAPFIN enforces strict Service Level Agreements (SLAs) for global clients — e.g., fill roles within 60 days.',
+          'We bring the same discipline to internal mobility: redeployments are targeted to move within ≤60 days, not left open-ended.',
+          'This gives you confidence that if you complete the upskilling steps, your next role will materialize quickly — just as TAPFIN guarantees for contingent workers.'
+        ],
+        actions: [
+          {label:'See current SLA policy', href:'#sla-policy'},
+          {label:'Talk to a mobility coach', href:'#book-coach'}
+        ]
+      }
     };
 
     function renderContext(key){
@@ -466,6 +460,63 @@
       openDrawer(key);
     });
   })();
-  </script>
+
+  // ── Copilot Chat Wiring ───────────────────────────
+  const chatForm = document.getElementById("copilotForm");
+  const userInput = document.getElementById("userInput");
+  const drawer = document.getElementById("copilotDrawer");
+
+ const mainEl = drawer.querySelector("main");
+ mainEl.addEventListener("scroll", () => {
+  if (mainEl.scrollTop > 0) {
+    drawer.classList.add("scrolled");
+  } else {
+    drawer.classList.remove("scrolled");
+  }
+});
+
+
+  chatForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const text = userInput.value.trim();
+    if (!text) return;
+    userInput.value = "";
+
+// user bubble
+const u = document.createElement("div");
+u.className = "user-msg";
+u.textContent = text;
+mainEl.appendChild(u);
+
+    // loading bubble (typing dots)
+const loading = document.createElement("div");
+loading.className = "bot-msg";
+loading.innerHTML = `
+  <div class="typing">
+    <span></span><span></span><span></span>
+  </div>
+`;
+mainEl.appendChild(loading);
+
+
+    try {
+  const res = await fetch("http://localhost:3000/copilot/employee", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: text })
+  });
+  const data = await res.json();
+
+  loading.innerHTML = data.reply || "⚠️ No reply from Copilot.";
+} catch (err) {
+  loading.innerHTML = "❌ Error contacting Copilot.";
+}
+
+
+    mainEl.scrollTop = mainEl.scrollHeight;
+  });
+</script>
+
+
 </body>
 </html>
