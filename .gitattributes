@@ -1,0 +1,17 @@
+# Ensure consistent line endings
+* text=auto eol=lf
+
+# Treat JavaScript, HTML, CSS, JSON as text
+*.js text
+*.mjs text
+*.html text
+*.css text
+*.json text
+
+# Mark binaries (don’t diff them)
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
